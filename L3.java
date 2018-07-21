@@ -1,31 +1,26 @@
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class L3 {
     public static void main(String[] args) {
-        HashMap<String, Integer> hm = init();
-        System.out.println(hm);
-    }
-
-
-
-
-
-
-
-
-     static HashMap<String, Integer> init(){
+        String[] st = {"Hello","Bye","Cat","Stone","Lego","Hello","Stone","Water","Stone","Finger"};
         HashMap<String, Integer> hm = new HashMap<>();
+        for (int i = 0; i < st.length ; i++) {
+            hm.put(st[i], hm.getOrDefault(st[i],0)+1);
+        }
+        System.out.println(hm);
 
-        hm.put("Hello", 0);
-        hm.put("Bye", 0);
-        hm.put("Cat", 0);
-        hm.put("Stone", 0);
-        hm.put("Lego", 0);
-        hm.put("Ball", 0);
-        hm.put("Fish", 0);
-        hm.put("Water", 0);
-        hm.put("Cake", 0);
-        hm.put("Finger", 0);
-        return hm;
     }
+
+
+
+
+
+
+
+
+
+
+
+
 }
