@@ -1,0 +1,27 @@
+#btn1 {
+   -fx-padding:2;
+   -fx-background-color: #7BBFC6;
+   }
+#btn1:hover {
+   -fx-padding:2;
+   -fx-background-color: #C1E0E5;
+   }
+   #TextArea {
+      -fx-background-image:url( "src/img/Background.png");
+      }
+      #TextArea .scroll-pane {
+            -fx-background-color:transparent;
+            }
+    #TextArea .scroll-pane .viewport {
+                -fx-background-color:transparent;
+                }
+   #TextArea .scroll-pane .content {
+               -fx-background-color:transparent;
+               }
+   #Btn3 {
+       -fx-background-color: #7BBFC6;
+   }
+#Btn3:hover {
+
+    -fx-background-color: #C1E0E5;
+}
