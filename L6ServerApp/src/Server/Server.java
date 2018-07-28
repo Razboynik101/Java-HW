@@ -33,10 +33,14 @@ public class Server {
                 public void run() {
                     while (true){
                         String wrd = self.nextLine();
-                        if (wrd.equals("/end")) break;            //
+                        if (wrd.equals("/end")) {
+                            pw.println("Admin stopped server ");
+                            System.out.println("Admin stopped server ");
+
+                            break;}
                         pw.println("Server: " + wrd);
 
-                        System.out.println(wrd);
+                        System.out.println("Server: "+wrd);
                     }
                 }
             }).start();
@@ -44,21 +48,30 @@ public class Server {
 
 
 
+new Thread(new Runnable() {
+    @Override
+    public void run() {
+        while (true) {
+            String str = sc.nextLine();
+            if (str.equals("/end")) {
+                pw.println("Client stopped server ");
+                System.out.println("Client stopped server ");
+
+                break;}
+            pw.println("Client: " + str);
+
+            System.out.println("Client: "+str);
+        }
+
+    }
+}).start();
 
 
 
 
-            while (true) {
-                String str = sc.nextLine();
-                if (str.equals("/end")) {
-                    pw.println("Client stopped server ");
-                    System.out.println("Client stopped server ");
 
-                    break;}
-                pw.println("Client: " + str);
 
-                System.out.println(str);
-            }
+
         } catch (IOException e) {
             System.out.println("Server inicialisation error");
         }
